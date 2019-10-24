@@ -11,14 +11,11 @@ router.post('/', (req, res, next) => {
         Name: req.body.name,
         Age: req.body.age,
         Email_Id:req.body.emailId
-        // address: req.body.address,
-        // contact: req.body.contactNo,
     }
     console.log(formData);
 
     connection.query('INSERT INTO USER_ACCOUNT SET ?', formData, (err, res) => {
         if(err) throw err;
-
       });
 })
 
